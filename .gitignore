@@ -1,0 +1,23 @@
+# Go
+*.exe
+*.test
+*.out
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+todo

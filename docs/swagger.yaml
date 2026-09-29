@@ -1,0 +1,180 @@
+basePath: /
+definitions:
+  model.Todo:
+    properties:
+      created_at:
+        type: string
+      done:
+        type: boolean
+      due_date:
+        type: string
+      id:
+        type: integer
+      priority:
+        maximum: 5
+        minimum: 1
+        type: integer
+      title:
+        maxLength: 100
+        minLength: 1
+        type: string
+    required:
+    - title
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: Todo 项目 REST API
+  title: Todo API
+  version: "1.0"
+paths:
+  /todos:
+    get:
+      description: 支持关键词搜索、分页、排序和完成状态筛选
+      parameters:
+      - description: 搜索关键词
+        in: query
+        name: keyword
+        type: string
+      - description: 页码
+        in: query
+        name: page
+        type: integer
+      - description: 每页数量
+        in: query
+        name: pageSize
+        type: integer
+      - description: 排序方式
+        in: query
+        name: sort
+        type: string
+      - description: 完成状态
+        in: query
+        name: done
+        type: boolean
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 查询Todo
+      tags:
+      - Todo
+    post:
+      consumes:
+      - application/json
+      description: 创建一个新的 Todo
+      parameters:
+      - description: Todo
+        in: body
+        name: todo
+        required: true
+        schema:
+          $ref: '#/definitions/model.Todo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 创建 Todo
+      tags:
+      - Todo
+  /todos/{id}:
+    delete:
+      description: 删除指定 Todo
+      parameters:
+      - description: Todo ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 删除 Todo
+      tags:
+      - Todo
+    put:
+      consumes:
+      - application/json
+      description: 修改指定 Todo
+      parameters:
+      - description: Todo ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Todo
+        in: body
+        name: todo
+        required: true
+        schema:
+          $ref: '#/definitions/model.Todo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 修改 Todo
+      tags:
+      - Todo
+  /todos/{id}/complete:
+    put:
+      description: 将指定 Todo 标记为完成
+      parameters:
+      - description: Todo ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 完成 Todo
+      tags:
+      - Todo
+swagger: "2.0"
