@@ -1,0 +1,21 @@
+# Environment
+.env
+
+# Go
+*.exe
+*.test
+*.out
+
+# Profiling
+*.pprof
+
+# Load test logs
+k6-*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

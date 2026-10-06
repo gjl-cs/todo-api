@@ -1,0 +1,158 @@
+{
+    "metrics": {
+        "http_req_duration{expected_response:true}": {
+            "avg": 4.666891136827741,
+            "min": 1.6022,
+            "med": 4.0777,
+            "max": 34.871,
+            "p(90)": 6.554000000000001,
+            "p(95)": 8.419179999999995
+        },
+        "redirect_successes": {
+            "count": 7345,
+            "rate": 243.18607838533927
+        },
+        "http_req_blocked": {
+            "med": 0,
+            "max": 11.1907,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.07387970047651461,
+            "min": 0
+        },
+        "data_sent": {
+            "rate": 18482.141957285785,
+            "count": 558220
+        },
+        "http_req_sending": {
+            "min": 0,
+            "med": 0,
+            "max": 3.5786,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.007514281824370318
+        },
+        "http_reqs": {
+            "rate": 243.18607838533927,
+            "count": 7345
+        },
+        "http_req_tls_handshaking": {
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0
+        },
+        "http_req_receiving": {
+            "max": 1.4754,
+            "p(90)": 0.5349600000000001,
+            "p(95)": 0.5546599999999998,
+            "avg": 0.09418179714091204,
+            "min": 0,
+            "med": 0
+        },
+        "iterations": {
+            "count": 7345,
+            "rate": 243.18607838533927
+        },
+        "vus_max": {
+            "value": 50,
+            "min": 50,
+            "max": 50
+        },
+        "data_received": {
+            "count": 1806870,
+            "rate": 59823.77528279346
+        },
+        "iteration_duration": {
+            "avg": 205.30179381892484,
+            "min": 201.8318,
+            "med": 204.6879,
+            "max": 236.2189,
+            "p(90)": 207.2159,
+            "p(95)": 209.0287
+        },
+        "unexpected_status_requests": {
+            "rate": 0,
+            "count": 0,
+            "thresholds": {
+                "count==0": false
+            }
+        },
+        "http_req_connecting": {
+            "avg": 0.008621238938053095,
+            "min": 0,
+            "med": 0,
+            "max": 1.8461,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 7345,
+            "value": 0
+        },
+        "checks": {
+            "passes": 22035,
+            "fails": 0,
+            "thresholds": {
+                "rate>0.99": false
+            },
+            "value": 1
+        },
+        "vus": {
+            "value": 50,
+            "min": 50,
+            "max": 50
+        },
+        "http_req_duration": {
+            "avg": 4.666891136827741,
+            "min": 1.6022,
+            "med": 4.0777,
+            "max": 34.871,
+            "p(90)": 6.554000000000001,
+            "p(95)": 8.419179999999995,
+            "thresholds": {
+                "p(95)<1000": false
+            }
+        },
+        "http_req_waiting": {
+            "p(90)": 6.446300000000002,
+            "p(95)": 8.33798,
+            "avg": 4.565195057862465,
+            "min": 1.5935,
+            "med": 4.0097,
+            "max": 34.8536
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "返回正常重定向或明确限流": {
+                    "name": "返回正常重定向或明确限流",
+                    "path": "::返回正常重定向或明确限流",
+                    "id": "b942eac38ca0dc7213c4367ac0a42d11",
+                    "passes": 7345,
+                    "fails": 0
+                },
+                "正常重定向包含 Location": {
+                    "passes": 7345,
+                    "fails": 0,
+                    "name": "正常重定向包含 Location",
+                    "path": "::正常重定向包含 Location",
+                    "id": "d45a7a8d09ff6a6a1a9533632e142d7e"
+                },
+                "响应耗时小于 1 秒": {
+                    "fails": 0,
+                    "name": "响应耗时小于 1 秒",
+                    "path": "::响应耗时小于 1 秒",
+                    "id": "31ef5ac4d6d0bec446096054d84c977f",
+                    "passes": 7345
+                }
+            }
+    }
+}

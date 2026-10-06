@@ -1,0 +1,139 @@
+{
+    "metrics": {
+        "http_req_failed": {
+            "passes": 31,
+            "fails": 0,
+            "value": 1
+        },
+        "data_sent": {
+            "count": 46965,
+            "rate": 212.73162353585806
+        },
+        "http_reqs": {
+            "count": 31,
+            "rate": 0.14041691322498884
+        },
+        "iteration_duration": {
+            "p(95)": 204.2646,
+            "avg": 203.44690000000006,
+            "min": 202.2201,
+            "med": 203.0938,
+            "max": 210.0877,
+            "p(90)": 203.8989
+        },
+        "http_req_sending": {
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0
+        },
+        "data_received": {
+            "count": 3193,
+            "rate": 14.462942062173848
+        },
+        "http_req_waiting": {
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "http_req_receiving": {
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0
+        },
+        "vus": {
+            "min": 1,
+            "max": 10,
+            "value": 10
+        },
+        "http_req_connecting": {
+            "p(95)": 1.02895,
+            "avg": 0.6165741935483873,
+            "min": 0,
+            "med": 0.718,
+            "max": 1.2637,
+            "p(90)": 0.9823
+        },
+        "http_req_tls_handshaking": {
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0
+        },
+        "vus_max": {
+            "value": 10,
+            "min": 10,
+            "max": 10
+        },
+        "http_req_blocked": {
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0
+        },
+        "iterations": {
+            "count": 21,
+            "rate": 0.09512113476531502
+        },
+        "http_req_duration": {
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "thresholds": {
+                "p(95)<1000": false
+            }
+        },
+        "checks": {
+            "passes": 21,
+            "fails": 42,
+            "thresholds": {
+                "rate>0.95": true
+            },
+            "value": 0.3333333333333333
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "状态码为 301 或 302": {
+                    "name": "状态码为 301 或 302",
+                    "path": "::状态码为 301 或 302",
+                    "id": "976eb0c66c76266b610b9dae2522426e",
+                    "passes": 0,
+                    "fails": 21
+                },
+                "存在 Location 响应头": {
+                    "id": "dc18e93548b8ddb0ef29bc22b8bce316",
+                    "passes": 0,
+                    "fails": 21,
+                    "name": "存在 Location 响应头",
+                    "path": "::存在 Location 响应头"
+                },
+                "响应耗时小于 1 秒": {
+                    "name": "响应耗时小于 1 秒",
+                    "path": "::响应耗时小于 1 秒",
+                    "id": "31ef5ac4d6d0bec446096054d84c977f",
+                    "passes": 21,
+                    "fails": 0
+                }
+            }
+    }
+}

@@ -1,0 +1,147 @@
+{
+    "metrics": {
+        "iterations": {
+            "rate": 11.035228555720122,
+            "count": 663
+        },
+        "checks": {
+            "passes": 1989,
+            "fails": 0,
+            "thresholds": {
+                "rate>0.95": false
+            },
+            "value": 1
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 5
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(90)": 4.0876,
+            "p(95)": 4.2128,
+            "avg": 3.5325826546002967,
+            "min": 2.2721,
+            "med": 3.5206,
+            "max": 5.5064
+        },
+        "http_req_tls_handshaking": {
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0
+        },
+        "http_req_waiting": {
+            "max": 5.5064,
+            "p(90)": 3.966380000000001,
+            "p(95)": 4.13373,
+            "avg": 3.4158199095022597,
+            "min": 2.1448,
+            "med": 3.3589
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 663,
+            "value": 0
+        },
+        "http_reqs": {
+            "count": 663,
+            "rate": 11.035228555720122
+        },
+        "http_req_blocked": {
+            "avg": 0.015619607843137255,
+            "min": 0,
+            "med": 0,
+            "max": 8.5991,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "http_req_duration": {
+            "min": 2.2721,
+            "med": 3.5206,
+            "max": 5.5064,
+            "p(90)": 4.0876,
+            "p(95)": 4.2128,
+            "avg": 3.5325826546002967,
+            "thresholds": {
+                "p(95)<1000": false
+            }
+        },
+        "data_sent": {
+            "count": 50388,
+            "rate": 838.6773702347293
+        },
+        "vus_max": {
+            "value": 5,
+            "min": 5,
+            "max": 5
+        },
+        "http_req_sending": {
+            "min": 0,
+            "med": 0,
+            "max": 0.557,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.006734841628959275
+        },
+        "http_req_connecting": {
+            "avg": 0.0033883861236802416,
+            "min": 0,
+            "med": 0,
+            "max": 0.8231,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "http_req_receiving": {
+            "min": 0,
+            "med": 0,
+            "max": 1.1559,
+            "p(90)": 0.54308,
+            "p(95)": 0.5557599999999999,
+            "avg": 0.11002790346907998
+        },
+        "data_received": {
+            "count": 163098,
+            "rate": 2714.66622470715
+        },
+        "iteration_duration": {
+            "max": 215.4989,
+            "p(90)": 204.94474,
+            "p(95)": 205.1434,
+            "avg": 204.29413393665143,
+            "min": 202.7121,
+            "med": 204.2742
+        }
+    },
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "返回 3xx 重定向状态": {
+                    "name": "返回 3xx 重定向状态",
+                    "path": "::返回 3xx 重定向状态",
+                    "id": "de00221babe0c764d995e888a0df38af",
+                    "passes": 663,
+                    "fails": 0
+                },
+                "包含 Location 响应头": {
+                    "name": "包含 Location 响应头",
+                    "path": "::包含 Location 响应头",
+                    "id": "43e44a158d64b5847f354b46de32bcd5",
+                    "passes": 663,
+                    "fails": 0
+                },
+                "请求耗时小于 1 秒": {
+                    "name": "请求耗时小于 1 秒",
+                    "path": "::请求耗时小于 1 秒",
+                    "id": "f4166d96c9e00a16be8f2034965f1fe2",
+                    "passes": 663,
+                    "fails": 0
+                }
+            },
+        "name": ""
+    }
+}
